@@ -28,7 +28,6 @@ public class Main {
 				}
 			} catch (Exception e) {
 				System.out.println("Not a valid integer!");
-				sc.nextLine();
 			}
 		}
 		
@@ -54,7 +53,6 @@ public class Main {
 				}
 			} catch (Exception e) {
 				System.out.println("Invalid selection!");
-				sc.nextLine();
 			}
 		}
 		
@@ -138,16 +136,19 @@ public class Main {
 					}
 				} catch (Exception e) {
 					System.out.println("Invalid selection!");
-					sc.nextLine();
 				}
 			}
 			
 			if (reviewMethod == 1) {
 				System.out.println("\n-- ORIGINAL ARRAY --");
-				System.out.println(myArray);
+				for (int i = 0; i < myArray.length; i++) {
+		            System.out.print(myArray[i] + " ");
+		        }
 			} else if (reviewMethod == 2) {
 				System.out.println("\n-- SORTED ARRAY --");
-				System.out.println(mySortedArray);
+				for (int i = 0; i < mySortedArray.length; i++) {
+		            System.out.print(mySortedArray[i] + " ");
+		        }
 			} else if (reviewMethod == 3) {
 				main();
 				break;
@@ -157,7 +158,6 @@ public class Main {
 				break;
 			} else {
 				System.out.println("Invalid selection!");
-				sc.nextLine();
 			}
 		}
 	}
